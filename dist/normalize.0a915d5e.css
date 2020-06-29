@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*# sourceMappingURL=/normalize.0a915d5e.css.map */
