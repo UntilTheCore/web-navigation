@@ -1,0 +1,49 @@
+/*
+小屏幕手机,比如iphone 5
+*/
+/*
+普遍的尺寸,比如iphone 8
+*/
+@media only screen and (max-width: 500px) and (min-width: 375px) {
+  .setbgc {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 18px;
+  }
+  .container {
+    position: absolute;
+    width: 85%;
+    top: 30vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .search {
+    height: 0.8rem;
+    border: 1px solid red;
+    position: relative;
+  }
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #ccc;
+  }
+  .search form {
+    height: 0.8rem;
+  }
+  .search input {
+    height: 0.8rem;
+    outline: 1px solid black;
+  }
+}
+
+
+/*# sourceMappingURL=/test.3e11d453.css.map */

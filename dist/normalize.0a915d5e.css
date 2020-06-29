@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
+    outline: none;
 }
-
+body {
+    background: #ccc;
+}
 ul,li {
     list-style: none;
 }
