@@ -5,9 +5,14 @@
 > 如何开发
 
 ```bash
-yarn add global parcel
+# 安装环境
+yarn global add parcel
 
+# 运行
 parcel src/index.html
+
+# 构建
+yarn build
 ```
 
 > 使用方式 - 移动端
