@@ -1,14 +1,192 @@
-/*
-小屏幕手机,比如iphone 5
-*/
-@media only screen  and (max-width: 375px) and (min-width: 320px){
-
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    background: url("https://i.loli.net/2020/07/01/4al9oPGHVDrs15W.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
 }
 /*
-普遍的尺寸,比如iphone 8
-*/
-@media only screen and (max-width: 500px) and (min-width: 315px){
+电脑端
 
+*/
+@media only screen and (min-width: 500px){
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 1000px;
+        height: 450px;
+    }
+
+    .search {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 720px;
+        height: 56px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        opacity: .6;
+        transition: all .8s;
+    }
+
+    .search:hover {
+        opacity: 1;
+    }
+
+
+    .icon-search {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        height: 56px;
+        width: 56px;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+        color: #808080;
+    }
+    
+    .icon-search:hover {
+        cursor: pointer;
+    }
+
+    .search-icon-box {
+        width: 56px;
+        height: 56px;
+        background: url("https://i.loli.net/2020/07/01/YIXKUp8wV2BnzgR.png") no-repeat;
+        background-position: center center;
+    }
+
+    .searchForm > input {
+        position: absolute;
+        left: 56px;
+        top: 0;
+        height: 100%;
+        width: 600px;
+        font-size: 18px;
+    }
+
+    .list > ul {
+        width: 100%;
+        height: 300px;
+        margin-top: 160px;
+    }
+
+    ul > li {
+        position: relative;
+        top: 0;
+        left: 0;
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        margin-top: 5px;
+        transition: all ease-out .2s;
+        cursor: pointer;
+    }
+
+    ul > li:hover > div {
+        opacity: 1;
+    }
+
+    /* 使用 margin-top 会破坏结构，利用 relative 的特性来实现动画*/
+    ul > li:not(:last-child):hover {
+        top: -5px;
+    }
+
+    li > div {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 70px;
+        height: 70px;
+        background-color: #f3f3f3;
+        border-radius: 50%;
+        opacity: .8;
+    }
+
+    li > span {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #CCD6D7;
+        font-size: 15px;
+    }
+
+    li > div > .icon-close {
+        display: none;
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+        color: white;
+        background-color: #636161;
+    }
+
+    li > div > .icon-close:hover {
+        cursor: pointer;
+    }
+
+    li > div > .bgc-div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        background: url("https://developer.mozilla.org/favicon.ico") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    li h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 36px;
+    }
+
+    .icon-add {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 35px;
+        height: 35px;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+        color: #6C6C6C;
+    }
+}
+/*
+移动端普遍的尺寸,比如iphone 8
+*/
+@media only screen and (max-width: 500px) and (min-width: 300px){
+
+    body {
+        max-width: 100%;
+        max-height: 100%;
+        background: url("https://i.loli.net/2020/07/01/Fgjx9Yc4H2OChQB.jpg") no-repeat;
+        background-size: 100vw 100vh ;
+    }
     .setbgc {
         position: absolute;
         right: 50px;
@@ -77,12 +255,42 @@
     }
 
     li > div > .icon-close {
+        display: none;
         position: absolute;
         top: -1vw;
         right: -1vw;
         width: 6vw;
         height: 6vw;
         border-radius: 50%;
+    }
+
+    li > div > .bgc-div {
+        /*display: none;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 50%;
+        height: 50%;
+        background: url("https://developer.mozilla.org/favicon.ico") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    li h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 9vw;
+    }
+
+    li span {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow : hidden;
+        text-overflow: ellipsis;
     }
 
     .icon-add {
