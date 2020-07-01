@@ -255,18 +255,37 @@ $('.list > ul').on('mouseup', 'li', function (e) {
     }
   }
 }); // 点击任意地方隐藏删除按钮
+// $('.container').on('mousedown',e => {
+//     if(2 === e.button){
+//         if(isCloseBtnShow) {
+//             $('.list .icon-close').css({'display' : 'none'})
+//             e.stopPropagation()
+//             isCloseBtnShow = false
+//         }
+//     }
+// })
 
-$('.container').on('mousedown', function (e) {
-  if (2 === e.button) {
-    if (isCloseBtnShow) {
-      $('.list .icon-close').css({
-        'display': 'none'
-      });
-      e.stopPropagation();
-      isCloseBtnShow = false;
+$('.container').on({
+  'mousedown': function mousedown(e) {
+    if (2 === e.button) {
+      hideCloseBtn(e);
     }
+  },
+  'touchstart': function touchstart(e) {
+    hideCloseBtn(e);
   }
-}); // 响应点击跳转
+});
+
+function hideCloseBtn(event) {
+  if (isCloseBtnShow) {
+    $('.list .icon-close').css({
+      'display': 'none'
+    });
+    event.stopPropagation();
+    isCloseBtnShow = false;
+  }
+} // 响应点击跳转
+
 
 $('.list > ul').on('click', '.li-url', function (e) {
   if (timeStep < 100) {

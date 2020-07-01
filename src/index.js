@@ -129,18 +129,36 @@ $('.list > ul').on('mouseup','li',e => {
 })
 
 // 点击任意地方隐藏删除按钮
-$('.container').on('mousedown',e => {
-    if(2 === e.button){
-        if(isCloseBtnShow) {
-            $('.list .icon-close').css({'display' : 'none'})
-            e.stopPropagation()
-            isCloseBtnShow = false
+// $('.container').on('mousedown',e => {
+//     if(2 === e.button){
+//         if(isCloseBtnShow) {
+//             $('.list .icon-close').css({'display' : 'none'})
+//             e.stopPropagation()
+//             isCloseBtnShow = false
+//         }
+//     }
+// })
+
+$('.container').on({
+    'mousedown' : e => {
+        if(2 === e.button){
+            hideCloseBtn(e)
         }
+    },
+    'touchstart': e => {
+        hideCloseBtn(e)
     }
 })
 
+function hideCloseBtn(event) {
+    if (isCloseBtnShow) {
+        $('.list .icon-close').css({'display': 'none'})
+        event.stopPropagation()
+        isCloseBtnShow = false
+    }
+}
 // 响应点击跳转
-$('.list > ul').on('click','.li-url',e => {
+    $('.list > ul').on('click','.li-url',e => {
     if(timeStep < 100) {
         let url = $(e.target).parents('.li-url').data('url')
         window.open(url)
