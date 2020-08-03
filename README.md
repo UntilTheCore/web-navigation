@@ -1,6 +1,6 @@
 > 项目预览
 
-点击 ====> [前端导航](https://untilthecore.github.io/webNavigation/dist/index.html)
+点击 ====> [前端导航](https://untilthecore.github.io/web-navigation/dist/index.html)
 
 > 如何开发
 
